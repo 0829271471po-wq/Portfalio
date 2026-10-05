@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <title>Posarin Sukdee — Portfolio</title>
+  <!--
+    แก้ข้อมูลในไฟล์นี้ แล้วสร้าง portfolio.pdf ใหม่ได้ 2 วิธี:
+    1) เปิดไฟล์นี้ใน Chrome > Ctrl+P > Destination: Save as PDF > ตั้ง Margins: None > เปิด Background graphics > Save เป็น portfolio.pdf
+    2) หรือให้ Claude สร้างให้ใหม่
+  -->
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    @page { size: A4; margin: 0; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: "Prompt", sans-serif; color: #1e1b2e; background: #e6edf8; font-size: 10.5pt; line-height: 1.55; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .page { width: 210mm; height: 297mm; margin: 0 auto; background: #fff; display: grid; grid-template-columns: 68mm 1fr; overflow: hidden; }
+    aside { background: #0b1630; color: #ece9f7; padding: 16mm 9mm; }
+    .avatar { width: 34mm; height: 34mm; border-radius: 50%; margin-bottom: 7mm; display: grid; place-items: center; font-size: 26pt; font-weight: 700; color: #fff; background: linear-gradient(140deg, #2563eb, #7dd3fc); }
+    aside h1 { font-size: 20pt; line-height: 1.15; font-weight: 700; }
+    aside .role { color: #93c5fd; margin: 2mm 0 8mm; font-size: 10pt; }
+    aside h3 { font-size: 9pt; letter-spacing: 0.12em; color: #60a5fa; margin: 7mm 0 3mm; font-weight: 600; }
+    aside p, aside li { font-size: 9.3pt; color: #cfdbf2; }
+    aside ul { list-style: none; display: flex; flex-direction: column; gap: 1.6mm; }
+    .tags { display: flex; flex-wrap: wrap; gap: 1.5mm; }
+    .tags span { font-size: 8.3pt; padding: 0.6mm 2.4mm; border-radius: 3mm; background: rgba(96, 165, 250, 0.2); color: #dbeafe; }
+    main { padding: 16mm 13mm; }
+    main h2 { font-size: 11.5pt; color: #1d4ed8; font-weight: 600; letter-spacing: 0.04em; padding-bottom: 1.5mm; margin: 0 0 4mm; border-bottom: 1.5px solid #dbeafe; }
+    section { margin-bottom: 7mm; }
+    .summary { color: #3f3a56; }
+    .item { margin-bottom: 4mm; }
+    .item-head { display: flex; justify-content: space-between; align-items: baseline; gap: 4mm; }
+    .item h4 { font-size: 10.5pt; font-weight: 600; }
+    .item .date { font-family: "Fira Code", monospace; font-size: 8.3pt; color: #2563eb; white-space: nowrap; }
+    .item .org { color: #6b6585; font-size: 9.3pt; }
+    .item ul { margin: 1mm 0 0 4.5mm; color: #3f3a56; font-size: 9.5pt; }
+    .stack { font-family: "Fira Code", monospace; font-size: 8pt; color: #2563eb; }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <aside>
+      <div class="avatar">PS</div>
+      <h1>โปสรินท์<br />สุขดี</h1>
+      <p class="role">Posarin Sukdee<br />ม.6 แผนการเรียนวิทย์-คณิต</p>
+
+      <h3>ติดต่อ</h3>
+      <ul>
+        <li>your.email@gmail.com</li>
+        <li>08x-xxx-xxxx</li>
+        <li>โรงเรียนของคุณ</li>
+        <li>github.com/yourname</li>
+      </ul>
+
+      <h3>เป้าหมาย</h3>
+      <p>คณะวิศวกรรมศาสตร์<br />สาขาวิศวกรรมคอมพิวเตอร์</p>
+
+      <h3>ทักษะ</h3>
+      <div class="tags"><span>Python</span><span>Arduino / C++</span><span>HTML / CSS / JS</span><span>ESP32</span><span>Scratch</span><span>Canva</span></div>
+
+      <h3>ภาษา</h3>
+      <ul><li>ไทย — ภาษาแม่</li><li>English — ดี</li></ul>
+
+      <h3>ความสนใจ</h3>
+      <p>หุ่นยนต์ · IoT · การเขียนเกม · อิเล็กทรอนิกส์</p>
+    </aside>
+
+    <main>
+      <section>
+        <h2>แนะนำตัว</h2>
+        <p class="summary">
+          ผมหลงใหลการเขียนโปรแกรมและอิเล็กทรอนิกส์ตั้งแต่ ม.3 ชอบสร้างโปรเจกต์ที่ช่วยแก้ปัญหาจริงในโรงเรียน
+          และอยากเข้าใจคอมพิวเตอร์ตั้งแต่ระดับวงจรจนถึงซอฟต์แวร์ จึงตั้งใจศึกษาต่อสาขาวิศวกรรมคอมพิวเตอร์
+        </p>
+      </section>
+
+      <section>
+        <h2>การศึกษา</h2>
+        <div class="item">
+          <div class="item-head"><h4>มัธยมศึกษาตอนปลาย · วิทย์-คณิต</h4><span class="date">2024 – ปัจจุบัน</span></div>
+          <p class="org">โรงเรียนของคุณ · GPAX 3.xx (5 ภาคเรียน)</p>
+        </div>
+        <div class="item">
+          <div class="item-head"><h4>มัธยมศึกษาตอนต้น</h4><span class="date">2021 – 2024</span></div>
+          <p class="org">โรงเรียนของคุณ · GPAX 3.xx</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>ผลงานเด่น</h2>
+        <div class="item">
+          <div class="item-head"><h4>Smart Plant Watering</h4><span class="stack">Arduino · C++</span></div>
+          <ul><li>ระบบรดน้ำอัตโนมัติวัดความชื้นในดิน ใช้งานจริงในแปลงผักของโรงเรียน</li></ul>
+        </div>
+        <div class="item">
+          <div class="item-head"><h4>Line Follower Robot</h4><span class="stack">Arduino · PID</span></div>
+          <ul><li>หุ่นยนต์เดินตามเส้นสำหรับการแข่งขัน ออกแบบโครงและเขียนโปรแกรมเอง</li></ul>
+        </div>
+        <div class="item">
+          <div class="item-head"><h4>IoT Weather Station</h4><span class="stack">ESP32 · IoT</span></div>
+          <ul><li>สถานีวัดอากาศ ส่งข้อมูลขึ้นมือถือแบบเรียลไทม์</li></ul>
+        </div>
+        <div class="item">
+          <div class="item-head"><h4>วิเคราะห์ข้อมูลฝุ่น PM2.5</h4><span class="stack">Python · Data</span></div>
+          <ul><li>โครงงานวิทยาศาสตร์ เก็บและวิเคราะห์ข้อมูลฝุ่นรอบโรงเรียน</li></ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>กิจกรรมและรางวัล</h2>
+        <div class="item"><div class="item-head"><h4>การแข่งขันหุ่นยนต์เดินตามเส้น — รองชนะเลิศอันดับ 1 ระดับภาค</h4><span class="date">2025</span></div></div>
+        <div class="item"><div class="item-head"><h4>สอวน. คอมพิวเตอร์ ค่าย 1</h4><span class="date">2025</span></div></div>
+        <div class="item"><div class="item-head"><h4>ค่ายวิศวกรรมคอมพิวเตอร์ (ComCamp)</h4><span class="date">2025</span></div></div>
+        <div class="item"><div class="item-head"><h4>โครงงานวิทยาศาสตร์ — เหรียญทอง ศิลปหัตถกรรมนักเรียน</h4><span class="date">2024</span></div></div>
+        <div class="item"><div class="item-head"><h4>จิตอาสาสอนน้องเขียนโปรแกรม Scratch 20 ชั่วโมง</h4><span class="date">2024</span></div></div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
