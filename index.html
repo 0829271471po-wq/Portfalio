@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Posarin Sukdee — Computer Engineering Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Anuphan:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="loading">
+  <!-- ===== INTRO: circuit board + name + progress ===== -->
+  <div class="intro" id="intro">
+    <div class="intro-inner">
+      <div class="intro-top"><span>POSARIN SUKDEE</span><span>PORTFOLIO · 2026</span></div>
+      <pre class="boot" id="boot"></pre>
+      <div class="intro-center">
+        <svg class="board" id="board" viewBox="0 0 600 400" aria-hidden="true">
+          <defs>
+            <radialGradient id="chipGlow"><stop offset="0%" stop-color="#7dd3fc" stop-opacity="0.5" /><stop offset="100%" stop-color="#7dd3fc" stop-opacity="0" /></radialGradient>
+          </defs>
+          <circle class="glow" cx="300" cy="200" r="150" fill="url(#chipGlow)" />
+          <circle class="orbit o1" cx="300" cy="200" r="92" />
+          <circle class="orbit o2" cx="300" cy="200" r="78" />
+          <g id="traces"></g>
+          <rect class="chip" x="250" y="150" width="100" height="100" rx="12" />
+          <path class="mark" d="M285 228 L285 172 L303 172 Q318 172 318 186 Q318 200 303 200 L285 200" />
+          <path class="mark accent" d="M300 214 L312 226" />
+        </svg>
+        <h1 class="intro-name">Posarin Sukdee<span>.</span></h1>
+        <p class="intro-roles">FUTURE COMPUTER ENGINEER · TCAS70</p>
+        <div class="intro-bar">
+          <div class="track"><span id="introFill"></span></div>
+          <div class="meta"><span id="introStatus">INITIALIZING</span><span id="introPct">0%</span></div>
+        </div>
+      </div>
+      <div class="intro-bottom"><span>BANGKOK, TH</span><em>คลิกเพื่อข้าม</em></div>
+    </div>
+  </div>
+
+  <!-- ===== CURSOR ===== -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+  <div class="bg-glow" id="bgGlow"></div>
+
+  <!-- ===== NAV ===== -->
+  <header class="nav" id="nav">
+    <div class="nav-progress" id="navProgress"></div>
+    <a href="#home" class="brand"><i></i>Posarin Sukdee</a>
+    <nav class="pill" id="pill">
+      <span class="pill-bg" id="pillBg"></span>
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#activities">Activities</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <button class="round-btn" id="soundBtn" aria-label="เปิด/ปิดเสียง" title="เปิด/ปิดเสียงคลิก"><i class="fa-solid fa-volume-high"></i></button>
+      <a href="portfolio.pdf" class="btn btn-grad btn-sm" download="Posarin-Sukdee-Portfolio.pdf"><i class="fa-solid fa-file-arrow-down"></i> Portfolio</a>
+      <button class="round-btn burger" id="burger" aria-label="menu"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </header>
+
+  <div class="side-btns">
+    <button id="upBtn" aria-label="ขึ้น"><i class="fa-solid fa-chevron-up"></i></button>
+    <button id="downBtn" aria-label="ลง"><i class="fa-solid fa-chevron-down"></i></button>
+  </div>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home">
+      <div class="hero-left">
+        <p class="eyebrow up"><i class="live"></i> TCAS70 · COMPUTER ENGINEERING PORTFOLIO</p>
+        <h1 class="headline up"><span id="typed">Future Engineer.</span><b class="caret"></b></h1>
+        <p class="intro-text up">
+          สวัสดีครับ ผมชื่อ <b>โปสรินท์ สุขดี</b> นักเรียนชั้น ม.6 แผนการเรียนวิทย์-คณิต
+          ผู้ใช้เวลาว่างไปกับการเขียนโปรแกรม ต่อวงจร และสร้างสิ่งที่แก้ปัญหาได้จริง
+          เว็บไซต์นี้รวบรวมเส้นทางการเรียนรู้ ผลงาน และความตั้งใจของผมในการศึกษาต่อ
+          <b>คณะวิศวกรรมศาสตร์ สาขาวิศวกรรมคอมพิวเตอร์</b>
+        </p>
+        <div class="cta up">
+          <a href="#projects" class="btn btn-grad">ดูผลงาน <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="#about" class="btn btn-line">รู้จักผมมากขึ้น</a>
+        </div>
+        <div class="socials up">
+          <a href="https://github.com/" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://youtube.com/" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://facebook.com/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://instagram.com/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="id-wrap up">
+        <!-- hanging rig: bar + rope (drawn every frame by the physics in script.js) -->
+        <div class="hanger" aria-hidden="true"></div>
+        <svg class="rope" id="rope" aria-hidden="true">
+          <path class="rope-shadow" id="ropeShadow" />
+          <path class="rope-base" id="ropeBase" />
+          <path class="rope-stripe" id="ropeStripe" />
+          <g id="ropeClip"><rect x="-13" y="-9" width="26" height="16" rx="4" class="clip-body" /><rect x="-7" y="-4" width="14" height="5" rx="2" class="clip-slot" /></g>
+        </svg>
+        <div class="id-card" id="idCard" title="ลากการ์ดได้">
+          <div class="id-hole"></div>
+          <div class="id-head"><span>STUDENT ID</span><span class="id-chip"></span></div>
+          <div class="id-main">
+            <div class="id-photo"><span>PS</span><img src="images/profile.jpg" alt="Posarin Sukdee" onerror="this.remove()" /></div>
+            <div>
+              <h3>Posarin Sukdee</h3>
+              <p>โปสรินท์ สุขดี</p>
+              <span class="id-badge">CPE APPLICANT</span>
+            </div>
+          </div>
+          <dl class="id-fields">
+            <div><dt>SCHOOL</dt><dd>โรงเรียนของคุณ</dd></div>
+            <div><dt>PROGRAM</dt><dd>วิทย์-คณิต</dd></div>
+            <div><dt>GPAX</dt><dd>3.xx</dd></div>
+            <div><dt>FOCUS</dt><dd>HW + SW</dd></div>
+          </dl>
+          <div class="id-foot"><div class="barcode"></div><span>PS-2026-CPE</span></div>
+          <div class="id-shine"></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="m-track" id="mTrack">
+        <span>Python</span><i>✦</i><span>Arduino</span><i>✦</i><span>C++</span><i>✦</i><span>ESP32</span><i>✦</i><span>HTML · CSS · JS</span><i>✦</i><span>Robotics</span><i>✦</i><span>IoT</span><i>✦</i><span>Problem Solving</span><i>✦</i>
+      </div>
+    </div>
+
+    <!-- ===== 01 ABOUT ===== -->
+    <section class="section" id="about">
+      <header class="sec-head">
+        <span class="kicker"><i class="kline"></i>01 — ABOUT ME</span>
+        <h2 class="split">ทำไมต้อง <span class="hl">วิศวะคอม?</span></h2>
+        <p>จุดเริ่มต้น แรงบันดาลใจ และสิ่งที่ผมอยากสร้างในอนาคต</p>
+      </header>
+      <div class="bento" data-stagger>
+        <article class="cell cell-why card" data-anim="left">
+          <span class="tag">MY STORY</span>
+          <h3>จากไฟ LED ดวงแรก สู่ความฝันที่ชัดเจน</h3>
+          <p>
+            ทุกอย่างเริ่มจากชุด Arduino ที่ได้รับตอน ม.3 วันที่ไฟ LED ดวงเล็กกะพริบตามโค้ดที่ผมเขียนเอง
+            คือวันที่ผมรู้ว่าคอมพิวเตอร์ไม่ได้อยู่แค่บนหน้าจอ แต่สามารถควบคุมสิ่งต่างๆ ในโลกจริงได้
+          </p>
+          <p>
+            หลังจากนั้นผมเริ่มสร้างหุ่นยนต์ ระบบรดน้ำอัตโนมัติ และเว็บไซต์ให้ชุมนุม ทุกโปรเจกต์สอนผมว่า
+            ปัญหาที่น่าแก้ที่สุดมักมาจากชีวิตประจำวัน และวิธีแก้ที่ดีต้องอาศัยความเข้าใจทั้ง <b>Hardware</b> และ <b>Software</b>
+          </p>
+          <p>
+            นี่คือเหตุผลที่ผมเลือก <b>วิศวกรรมคอมพิวเตอร์</b> สาขาที่จะทำให้ผมเข้าใจระบบตั้งแต่ระดับวงจรไปจนถึงผู้ใช้งาน
+            และนำความรู้ไปสร้างเทคโนโลยีที่ช่วยคนได้จริง
+          </p>
+        </article>
+        <!-- terminal card (style & motion from design 1, content from v8) -->
+        <article class="cell cell-term card" data-anim="right">
+          <div class="phone">
+            <div class="phone-screen">
+              <div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span>posarin@home:~</span></div>
+              <pre id="termBody"></pre>
+            </div>
+          </div>
+          <span class="pbadge pb1"><i class="fa-solid fa-microchip"></i> Arduino</span>
+          <span class="pbadge pb2"><i class="fa-brands fa-python"></i> Python</span>
+          <span class="pbadge pb3"><i class="fa-solid fa-lightbulb"></i> Problem Solving</span>
+        </article>
+        <article class="cell stat card" data-anim="zoom"><strong data-to="6">0</strong><span>Projects</span><small>ผลงานทั้ง Hardware และ Software</small></article>
+        <article class="cell stat card" data-anim="zoom"><strong data-to="5">0</strong><span>Awards</span><small>การแข่งขันและค่ายวิชาการ</small></article>
+        <article class="cell cell-quote card" data-anim="flip">
+          <i class="fa-solid fa-quote-left"></i>
+          <p>ปัญหาที่น่าแก้ที่สุด มักมาจาก <span class="hl">ชีวิตประจำวัน</span></p>
+        </article>
+        <article class="cell stat card" data-anim="zoom"><strong data-to="10">0</strong><span>Certificates</span><small>คอร์สออนไลน์และกิจกรรม</small></article>
+      </div>
+
+      <!-- Skills (part of About) -->
+      <div class="sub-head" data-anim="up">
+        <h3><i class="fa-solid fa-bolt"></i> ทักษะที่ฝึกฝน</h3>
+        <p>เรียนรู้ด้วยตัวเองผ่านโปรเจกต์ การแข่งขัน และคอร์สออนไลน์</p>
+      </div>
+      <div class="skills">
+        <div class="stack-card card" data-anim="left">
+          <div class="stack-head">
+            <span class="label"><i class="live"></i> SKILL STACK</span>
+            <span class="chip"><i class="fa-solid fa-hand-pointer"></i> HOVER TO EXPLORE</span>
+          </div>
+          <div class="tiles">
+            <div class="tile" data-val="85"><i class="fa-brands fa-python"></i><h4>Python</h4><div class="bar"><span></span></div><em>85%</em></div>
+            <div class="tile" data-val="82"><i class="fa-solid fa-microchip"></i><h4>Arduino / C++</h4><div class="bar"><span></span></div><em>82%</em></div>
+            <div class="tile" data-val="88"><i class="fa-solid fa-square-root-variable"></i><h4>Math &amp; Physics</h4><div class="bar"><span></span></div><em>88%</em></div>
+            <div class="tile" data-val="75"><i class="fa-solid fa-code"></i><h4>HTML / CSS / JS</h4><div class="bar"><span></span></div><em>75%</em></div>
+          </div>
+          <div class="activity"><span class="label">PASSION</span><div class="wave" id="wave"></div><strong>100%</strong></div>
+        </div>
+        <div class="skill-side" data-stagger>
+          <div class="svc card" data-anim="right"><i class="fa-solid fa-microchip"></i><div><h4>Electronics &amp; Robotics</h4><p>ออกแบบวงจร อ่านค่าเซ็นเซอร์ ควบคุมมอเตอร์ และจูนระบบ PID ให้หุ่นยนต์เคลื่อนที่ได้แม่นยำ</p></div></div>
+          <div class="svc card" data-anim="right"><i class="fa-solid fa-code"></i><div><h4>Programming</h4><p>เขียน Python และ C++ อย่างเป็นระบบ แบ่งโค้ดเป็นส่วน ทดสอบทีละขั้น และไล่แก้บั๊กอย่างมีเหตุผล</p></div></div>
+          <div class="svc card" data-anim="right"><i class="fa-solid fa-tower-broadcast"></i><div><h4>IoT</h4><p>เชื่อมบอร์ด ESP32 เข้ากับอินเทอร์เน็ต ส่งข้อมูลขึ้นแอปมือถือ และแสดงผลแบบเรียลไทม์</p></div></div>
+          <div class="svc card" data-anim="right"><i class="fa-solid fa-users"></i><div><h4>Teamwork &amp; Teaching</h4><p>ทำงานเป็นทีมภายใต้เวลาจำกัดในการแข่งขัน และถ่ายทอดความรู้ให้น้องผ่านกิจกรรมจิตอาสา</p></div></div>
+        </div>
+      </div>
+
+      <!-- Journey (part of About) -->
+      <div class="sub-head" data-anim="up">
+        <h3><i class="fa-solid fa-route"></i> เส้นทางการเรียนรู้</h3>
+        <p>กดที่แต่ละช่วงเพื่อดูว่าผมได้เรียนรู้อะไร และนำความรู้ไปสร้างอะไร</p>
+      </div>
+      <div class="stepper" id="stepper" data-anim="clip">
+        <button class="step active"><b>ม.4</b><span>Foundations</span></button>
+        <button class="step"><b>ม.5</b><span>Builder</span></button>
+        <button class="step"><b>ม.6</b><span>Problem Solver</span></button>
+        <button class="step"><b>NEXT</b><span>Computer Eng.</span></button>
+        <div class="step-line"><span id="stepFill"></span></div>
+      </div>
+      <div class="step-panel" id="stepPanel" data-anim="up"></div>
+    </section>
+
+    <!-- ===== 02 PROJECTS ===== -->
+    <section class="section" id="projects">
+      <header class="sec-head">
+        <span class="kicker"><i class="kline"></i>02 — PROJECTS</span>
+        <h2 class="split">ผลงานที่ <span class="hl">ภูมิใจ.</span></h2>
+        <p>ทุกชิ้นเริ่มจากปัญหาที่เจอจริง และจบด้วยสิ่งที่ใช้งานได้จริง</p>
+      </header>
+      <div class="seg" id="seg" data-anim="up">
+        <button class="active" data-f="all">ทั้งหมด</button>
+        <button data-f="hw">Hardware</button>
+        <button data-f="sw">Software</button>
+      </div>
+      <div class="works" data-stagger>
+        <article class="work card" data-cat="hw" data-anim="flip">
+          <span class="work-no">01</span><div class="work-icon"><i class="fa-solid fa-seedling"></i></div>
+          <div>
+            <h3>Smart Plant Watering</h3>
+            <p>ผักในแปลงของโรงเรียนมักเหี่ยวช่วงวันหยุดเพราะไม่มีคนรดน้ำ ผมจึงสร้างระบบที่วัดความชื้นในดินและสั่งปั๊มน้ำทำงานเองเมื่อดินแห้ง ปัจจุบันใช้งานจริงในแปลงผักของโรงเรียน</p>
+            <p class="learn"><i class="fa-regular fa-lightbulb"></i> ได้เรียนรู้: การออกแบบระบบให้ทนต่อการใช้งานจริง ไม่ใช่แค่ทำงานได้บนโต๊ะ</p>
+            <div class="tags"><span>Arduino</span><span>C++</span><span>Sensor</span></div>
+          </div>
+        </article>
+        <article class="work card" data-cat="hw" data-anim="flip">
+          <span class="work-no">02</span><div class="work-icon"><i class="fa-solid fa-robot"></i></div>
+          <div>
+            <h3>Line Follower Robot</h3>
+            <p>หุ่นยนต์เดินตามเส้นสำหรับการแข่งขันระดับภาค ผมรับหน้าที่ออกแบบโครงและเขียนโปรแกรมควบคุมแบบ PID ทดลองปรับค่าซ้ำหลายรอบจนหุ่นเข้าโค้งได้นิ่งและเร็วขึ้น</p>
+            <p class="learn"><i class="fa-regular fa-lightbulb"></i> ได้เรียนรู้: การทดลองอย่างเป็นระบบ และการทำงานเป็นทีมภายใต้แรงกดดัน</p>
+            <div class="tags"><span>Arduino</span><span>PID</span><span>รางวัลระดับภาค</span></div>
+          </div>
+        </article>
+        <article class="work card" data-cat="hw" data-anim="flip">
+          <span class="work-no">03</span><div class="work-icon"><i class="fa-solid fa-cloud-sun-rain"></i></div>
+          <div>
+            <h3>IoT Weather Station</h3>
+            <p>สถานีวัดอากาศขนาดเล็กด้วย ESP32 ที่ส่งค่าอุณหภูมิและความชื้นขึ้นแอปมือถือแบบเรียลไทม์ ทำให้ดูสภาพอากาศรอบบ้านได้จากทุกที่</p>
+            <p class="learn"><i class="fa-regular fa-lightbulb"></i> ได้เรียนรู้: การสื่อสารระหว่างอุปกรณ์ผ่านเครือข่าย และการจัดการพลังงานของบอร์ด</p>
+            <div class="tags"><span>ESP32</span><span>IoT</span></div>
+          </div>
+        </article>
+        <article class="work card" data-cat="sw" data-anim="flip">
+          <span class="work-no">04</span><div class="work-icon"><i class="fa-solid fa-chart-column"></i></div>
+          <div>
+            <h3>วิเคราะห์ข้อมูลฝุ่น PM2.5</h3>
+            <p>โครงงานวิทยาศาสตร์ที่เก็บข้อมูลฝุ่นรอบโรงเรียนแล้ววิเคราะห์ด้วย Python เพื่อหาช่วงเวลาและจุดที่ค่าฝุ่นสูงที่สุด และเสนอแนวทางลดการสัมผัสฝุ่นของนักเรียน</p>
+            <p class="learn"><i class="fa-regular fa-lightbulb"></i> ได้เรียนรู้: การใช้ข้อมูลหาคำตอบ แทนการคาดเดา</p>
+            <div class="tags"><span>Python</span><span>Data</span></div>
+          </div>
+        </article>
+        <article class="work card" data-cat="sw" data-anim="flip">
+          <span class="work-no">05</span><div class="work-icon"><i class="fa-solid fa-school"></i></div>
+          <div>
+            <h3>เว็บไซต์ชุมนุมคอมพิวเตอร์</h3>
+            <p>ออกแบบและพัฒนาเว็บไซต์ให้ชุมนุม รวมข่าวสาร ตารางกิจกรรม และผลงานของสมาชิกไว้ในที่เดียว รองรับการใช้งานบนมือถือ</p>
+            <p class="learn"><i class="fa-regular fa-lightbulb"></i> ได้เรียนรู้: การออกแบบโดยเริ่มคิดจากมุมมองของผู้ใช้</p>
+            <div class="tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+          </div>
+        </article>
+        <article class="work card" data-cat="sw" data-anim="flip">
+          <span class="work-no">06</span><div class="work-icon"><i class="fa-solid fa-gamepad"></i></div>
+          <div>
+            <h3>Math Quiz Game</h3>
+            <p>เกมฝึกคิดเลขเร็วสำหรับน้อง ม.ต้น ใช้ทบทวนบทเรียนแบบสนุก มีระดับความยาก ระบบจับเวลา และตารางคะแนนสูงสุด</p>
+            <p class="learn"><i class="fa-regular fa-lightbulb"></i> ได้เรียนรู้: การทำโปรแกรมให้คนอื่นใช้งานได้ง่าย</p>
+            <div class="tags"><span>Python</span><span>Pygame</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== 03 ACTIVITIES & AWARDS ===== -->
+    <section class="section" id="activities">
+      <header class="sec-head">
+        <span class="kicker"><i class="kline"></i>03 — ACTIVITIES &amp; AWARDS</span>
+        <h2 class="split">กิจกรรมและ <span class="hl">รางวัล.</span></h2>
+        <p>ประสบการณ์นอกห้องเรียนที่ช่วยหล่อหลอมให้ผมเติบโต</p>
+      </header>
+      <div class="awards" data-stagger>
+        <article class="award card" data-anim="zoom"><i class="fa-solid fa-trophy"></i><div><small>2025</small><h4>การแข่งขันหุ่นยนต์เดินตามเส้น</h4><p><b>รองชนะเลิศอันดับ 1 ระดับภาค</b> ทำงานร่วมกับเพื่อนในทีม 3 คน ตั้งแต่ออกแบบโครงจนถึงจูนโปรแกรม</p></div></article>
+        <article class="award card" data-anim="zoom"><i class="fa-solid fa-medal"></i><div><small>2025</small><h4>สอวน. คอมพิวเตอร์ ค่าย 1</h4><p><b>ผ่านการคัดเลือกเข้าค่าย</b> ได้ฝึกคิดเชิงอัลกอริทึมและเขียนโปรแกรมแก้โจทย์อย่างเข้มข้น</p></div></article>
+        <article class="award card" data-anim="zoom"><i class="fa-solid fa-campground"></i><div><small>2025</small><h4>ค่ายวิศวกรรมคอมพิวเตอร์</h4><p><b>ComCamp · มหาวิทยาลัยของคุณ</b> ได้สัมผัสการเรียนจริงของวิศวะคอม และยืนยันว่านี่คือสาขาที่ใช่</p></div></article>
+        <article class="award card" data-anim="zoom"><i class="fa-solid fa-flask"></i><div><small>2024</small><h4>โครงงานวิทยาศาสตร์</h4><p><b>เหรียญทอง งานศิลปหัตถกรรมนักเรียน</b> จากโครงงานวิเคราะห์ข้อมูลฝุ่น PM2.5 รอบโรงเรียน</p></div></article>
+        <article class="award card" data-anim="zoom"><i class="fa-solid fa-certificate"></i><div><small>2024</small><h4>Python for Beginners</h4><p><b>ใบประกาศนียบัตรคอร์สออนไลน์</b> ปูพื้นฐานการเขียนโปรแกรมที่นำมาใช้ในทุกโปรเจกต์</p></div></article>
+        <article class="award card" data-anim="zoom"><i class="fa-solid fa-hand-holding-heart"></i><div><small>2024</small><h4>จิตอาสาสอนน้องเขียนโปรแกรม</h4><p><b>สอน Scratch ให้น้อง ม.ต้น 20 ชั่วโมง</b> ได้เรียนรู้ว่าการอธิบายให้ผู้อื่นเข้าใจ คือการทบทวนความรู้ที่ดีที่สุด</p></div></article>
+      </div>
+    </section>
+
+    <!-- ===== 04 PORTFOLIO PDF ===== -->
+    <section class="section" id="pdf">
+      <div class="resume card" data-anim="zoom">
+        <div>
+          <span class="kicker in"><i class="kline"></i>04 — PORTFOLIO PDF</span>
+          <h2>ดาวน์โหลด<br /><span class="hl">Portfolio ฉบับเต็ม</span></h2>
+          <p>รวบรวมประวัติส่วนตัว ผลการเรียน ผลงาน กิจกรรม และเกียรติบัตรทั้งหมดไว้ในไฟล์ PDF สำหรับประกอบการพิจารณา TCAS รอบที่ 1</p>
+          <div class="cta">
+            <a href="portfolio.pdf" class="btn btn-grad" download="Posarin-Sukdee-Portfolio.pdf"><i class="fa-solid fa-download"></i> Download PDF</a>
+            <a href="portfolio.pdf" target="_blank" class="btn btn-line"><i class="fa-regular fa-eye"></i> ดูออนไลน์</a>
+          </div>
+        </div>
+        <a href="portfolio.pdf" target="_blank" class="paper" aria-label="ดู Portfolio">
+          <div class="paper-side"></div>
+          <div class="paper-main"><b></b><i></i><i class="s"></i><div class="gap"></div><i></i><i></i><i class="s"></i><div class="gap"></div><i></i><i class="s"></i></div>
+          <span class="pdf">PDF</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===== 05 CONTACT ===== -->
+    <section class="section" id="contact">
+      <header class="sec-head">
+        <span class="kicker"><i class="kline"></i>05 — CONTACT</span>
+        <h2 class="split">ขอบคุณที่สละเวลา<br /><span class="hl">อ่านผลงานของผมครับ</span></h2>
+        <p>
+          ผมพร้อมที่จะเรียนรู้ ลงมือทำ และเติบโตไปกับคณะวิศวกรรมศาสตร์ สาขาวิศวกรรมคอมพิวเตอร์
+          หากมีข้อสงสัยเพิ่มเติม ติดต่อผมได้ตามช่องทางด้านล่างครับ
+        </p>
+      </header>
+      <div class="contact">
+        <div class="contact-left" data-anim="left">
+          <button class="copy" id="copyEmail"><i class="fa-regular fa-envelope"></i><span>your.email@gmail.com</span><em id="copyHint">คัดลอก</em></button>
+          <div class="info"><i class="fa-solid fa-phone"></i><div><small>PHONE</small>08x-xxx-xxxx</div></div>
+          <div class="info"><i class="fa-solid fa-school"></i><div><small>SCHOOL</small>โรงเรียนของคุณ</div></div>
+          <div class="info"><i class="fa-solid fa-location-dot"></i><div><small>LOCATION</small>Bangkok, Thailand</div></div>
+          <div class="socials">
+            <a href="https://github.com/" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://youtube.com/" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://facebook.com/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://instagram.com/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+          <p class="sign">— โปสรินท์ สุขดี</p>
+        </div>
+        <form class="form card" id="form" data-anim="right">
+          <div class="row">
+            <label>ชื่อ<input name="name" required /></label>
+            <label>อีเมล<input name="email" type="email" required /></label>
+          </div>
+          <label>หัวข้อ<input name="subject" /></label>
+          <label>ข้อความ<textarea name="message" rows="5" required></textarea></label>
+          <button class="btn btn-grad" type="submit">ส่งข้อความ <i class="fa-solid fa-paper-plane"></i></button>
+          <p class="note" id="formNote">กดส่งแล้วจะเปิดโปรแกรมอีเมลพร้อมข้อความให้อัตโนมัติ</p>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <span>© <span id="year"></span> Posarin Sukdee</span>
+      <span class="mono">Portfolio · Computer Engineering · TCAS70</span>
+    </footer>
+  </main>
+
+  <!-- ===== CHATBOT ===== -->
+  <button class="chat-fab" id="chatFab" aria-label="ถาม PosarinBot"><i class="fa-solid fa-comment-dots"></i><span class="fab-tip">ถาม PosarinBot</span></button>
+  <aside class="chat" id="chat" aria-label="PosarinBot">
+    <div class="chat-head">
+      <span class="chat-ava"><i class="fa-solid fa-robot"></i></span>
+      <div><b>PosarinBot</b><small>ตอบเรื่องผลงาน · รางวัล · เป้าหมาย</small></div>
+      <button id="chatClose" aria-label="close"><i class="fa-solid fa-minus"></i></button>
+    </div>
+    <div class="chat-body" id="chatBody"></div>
+    <div class="chat-quick" id="chatQuick"><button>ทำไมต้องวิศวะคอม?</button><button>ผลงานเด่น</button><button>รางวัล</button><button>เกรด</button><button>ติดต่อ</button></div>
+    <form class="chat-input" id="chatForm"><input id="chatText" placeholder="พิมพ์คำถาม..." autocomplete="off" /><button aria-label="send"><i class="fa-solid fa-arrow-up"></i></button></form>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
